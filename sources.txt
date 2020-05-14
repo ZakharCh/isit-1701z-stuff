@@ -1,0 +1,9 @@
+
+Книги:
+    С.Прата "Язык программирования C++. Лекции и упражнения."
+    Prata, Stephen "C++ Primer"
+
+Сайт:
+    cppreference.com    https://en.cppreference.com/w/
+
+
