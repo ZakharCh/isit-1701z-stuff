@@ -12,18 +12,17 @@
 int main()
 {
 	std::vector<int> arr;
-	unsigned qty;
 
-	std::cout << "Введите количество чисел: ";
-	std::cin >> qty;
+	std::cout << "Вводите элементы, Ctrl-D - конец." << std::endl;
+	unsigned idx = 0, val;
 
-	arr.resize(qty);
-
-	unsigned idx = 0;
-	for (auto && i : arr) {
+	for(;;) {
 		std::cout << "Введите элемент " << idx++ << ": ";
-		std::cin >> i;
+		std::cin >> val;
+		if ( std::cin.good() ) { arr.push_back(val); continue; }
+		break;
 	}
+	std::cout << "Введено " << arr.size() << " чисел." << std::endl;
 	std::sort(arr.begin(), arr.end());
 	std::cout << "Отсортированный массив:" << std::endl;
 	for (auto && i : arr)
