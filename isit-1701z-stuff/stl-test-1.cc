@@ -19,17 +19,16 @@ int main()
 
 	arr.resize(qty);
 
-	for (unsigned i = 0; i < qty; i++) {
-		std::cout << "Введите элемент " << i << ": ";
-		std::cin >> arr[i];
+	unsigned idx = 0;
+	for (auto && i : arr) {
+		std::cout << "Введите элемент " << idx++ << ": ";
+		std::cin >> i;
 	}
-
 	std::sort(arr.begin(), arr.end());
-
 	std::cout << "Отсортированный массив:" << std::endl;
-	for (unsigned i = 0; i < qty; i++) {
-		std::cout << arr[i] << ' ';
-	}
+	for (auto && i : arr)
+		std::cout << i << ' ';
+
 	std::cout << std::endl;
 
 	return 0;
